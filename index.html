@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sushi Rating</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <h1>Sushi Rating</h1>
+        <p>Rate sushi items, save favorites, and find the best roll.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <div class="section-heading">
+          <h2>Top Rated</h2>
+          <p>The crowd favorites right now.</p>
+        </div>
+        <div id="top-rated-list" class="top-rated-grid"></div>
+      </section>
+
+      <section class="card">
+        <h2>Popular Sushi</h2>
+        <p>Click a sushi item and choose your rating. Ratings are stored locally in your browser.</p>
+        <div id="sushi-list" class="sushi-grid"></div>
+      </section>
+
+      <section class="card">
+        <h2>Add a Sushi</h2>
+        <form id="sushi-form" class="form-grid">
+          <label>
+            Sushi Name
+            <input type="text" id="sushi-name" placeholder="E.g. Dragon Roll" required />
+          </label>
+          <label>
+            Description
+            <input type="text" id="sushi-desc" placeholder="E.g. avocado, eel, cucumber" required />
+          </label>
+          <label>
+            Image URL
+            <input type="url" id="sushi-image" placeholder="https://example.com/sushi.jpg" />
+          </label>
+          <button type="submit" class="button button-primary">Add Sushi</button>
+        </form>
+      </section>
+    </main>
+
+    <div id="rating-modal" class="modal hidden" aria-hidden="true">
+      <div class="modal-panel">
+        <button id="close-modal" class="close-button" aria-label="Close rating panel">×</button>
+        <h3 id="modal-title">Rate this sushi</h3>
+        <div class="rating-buttons" id="rating-buttons"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
